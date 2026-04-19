@@ -1,0 +1,16 @@
+<svg width="120" height="90" viewBox="0 0 120 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Steam -->
+  <path d="M38 22C34 16 42 12 38 6" stroke="#C9A86A" stroke-width="2.5" stroke-linecap="round"></path>
+  <path d="M48 24C44 18 52 14 48 8" stroke="#C9A86A" stroke-width="2.5" stroke-linecap="round"></path>
+  <path d="M58 22C54 16 62 12 58 6" stroke="#C9A86A" stroke-width="2.5" stroke-linecap="round"></path>
+
+  <!-- Cup -->
+  <path d="M22 28H70V45C70 52 64 58 56 58H36C28 58 22 52 22 45V28Z" fill="#3B2416"></path>
+  <path d="M70 32H77C83 32 87 36 87 41C87 46 83 50 77 50H70" stroke="#3B2416" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+
+  <!-- Base -->
+  <rect x="18" y="61" width="58" height="4" rx="2" fill="#C9A86A"></rect>
+
+  <!-- Coffee surface -->
+  <path d="M28 32H64" stroke="#D8B98B" stroke-width="3" stroke-linecap="round"></path>
+</svg>

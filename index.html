@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- favicon -->
+   <link rel="icon" type="image/png" sizes="192x192" href="image/android-chrome-192x192.png">
+   <meta name="theme-color" content="#ffffff">
+    <!-- Google font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gabriela&family=Share+Tech&display=swap" rel="stylesheet">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- css -->
+    <link rel="stylesheet" href="Style/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brew Haven - Your Perfect Moment</title>
+    <!-- description -->
+    <meta name="description" content="Discover a world of flavors and aromas, where every sip tells a story.">
+</head>
+<body>
+
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+
+    </ul>
+    <form class="form-inline my-2 my-lg-0 d-flex">
+      <input class="form-control ml-25 mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+    &nbsp; 
+    login & signup -->
+    <!-- <div class="login-signup d-flex ml-3 align-items-center justify-content-center gap-2">
+        <a href="#" class="btn btn-primary">Login</a>
+        <a href="#" class="btn btn-secondary">Signup</a>
+    </div>
+  </div>
+</nav> -->
+<!-- Navbar -->
+<div class="navbar" id="navbar">
+  <div class="nav-container">
+    <div class="logo">
+        <a href="index.html"><img src="Image/logo.svg" alt="Brew Haven Logo" class="logo-full" draggable="false"></a>
+        <a href="index.html"><img src="Image/logo-mini.svg" class="logo-mini" style="display: none;" alt="Brew Haven Logo" draggable="false"></a>
+    </div>
+<div mobile-wrapper>
+      <div class="mobile-search-wrapper">
+      <button id="mobileSearchBtn" class="mobile-search-btn">
+        <i class="fa fa-search"></i>
+      </button>
+
+      <div id="mobileSearchBox" class="mobile-search-box">
+        <input type="text" placeholder="Search..." id="mobileSearchInput">
+        <button class="mobile-search-submit" id="mobileSearchSubmit"><i class="fa fa-search"></i></button>
+      </div>
+    </div>
+    <div class="mobile-cart-wrapper">
+      <i class="mobile-cart-icon fa fa-shopping-cart" id="mobileCartIcon"></i>
+      <span class="mobile-cart-count" id="mobileCartCount">0</span>
+    </div>
+    <div class="menu-btn" id="menuBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</div>
+
+    <div class="nav-menu" id="navMenu">
+
+    <div class="nav-links">
+    <ul>
+       <li class="nav-link" id="home" style="font-weight: bold;"><a href="#">Home</a></li>
+
+        <li class="products-dropdown"><a class="product-link"  id="productsToggle">
+          <span id="currentCategory">Products</span>
+             <span><i class="	fa fa-chevron-down arrow"></i></span>
+            </a>
+
+            <ul class="dropdown-list" id="dropdownList">
+                <li onclick="selectCategory('all' , this)" class="dropdown-item">All Categories</li>
+                <li onclick="selectCategory('hot', this)" class="dropdown-item">Hot</li>
+                <li onclick="selectCategory('iced', this)" class="dropdown-item">Iced</li>
+                <li onclick="selectCategory('desserts', this)" class="dropdown-item">Desserts</li>
+            </ul>
+            </li>
+      
+        <li id="about" class="about nav-link">About</li>
+        <li id="contact" class="contact nav-link">Contact us</li>
+
+    </ul>
+  </div>
+
+  <div class="nav-search">
+    <div class="search-input">
+      <input type="text" placeholder="Search..." id="searchInput">
+      <button class="search" id="searchBtn"><i class="fa fa-search"></i></button>
+    </div>
+  </div>
+
+  <div class="menu-divider"></div>
+   <div id="links-1" class="links1">
+    <a href=""><i class="cart-icon fa fa-shopping-cart"></i></a>
+  <a href="login.html"><button class="login">Login</button></a>
+  <a href="signup.html"><button class="signup">Sign Up</button></a>
+  </div>
+  
+  <div id="links-2" class="links2" style="display: none;">
+    <i class="cart-icon fa fa-shopping-cart" id="cartIcon"></i>
+    <span id="cartCount" class="cart-count">0</span>
+
+
+
+
+    <div id="cart" class="cart"
+    style="position: absolute;
+     background: #fffaf5; 
+     border-top: 1px solid rgb(213 192 178); 
+     padding: 20px;
+    top:63px;
+    width: 50%; 
+    text-align: center; 
+    left: 48%; 
+    border-radius: 0 0 20px 20px; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    animation: fadeIn .3s ease-in-out;
+    display: none;">
+        <div class="cart-header">
+              <h2>Cart</h2>
+              <i class="close fa fa-times" id="closeCart"></i>
+        </div>
+      <div>
+      <div>
+                  <p id="emptyCart" style="padding:25px; color: #a79370;">Your cart is empty</p>
+        <ul id="cartItems">
+        </ul>
+      </div>
+        <div class="cart-total" id="cartTotal">
+            
+        <div id="totalDiv"></div>
+        </div>
+         <a href="checkout.html"><button id="checkout">Checkout</button></a>
+      </div>
+    </div>
+    <a href="#"><h2 id="userName"></h2></a>
+    <button id="logout" class="logout">Log out</button>
+  </div>
+</div>
+</div>
+  </div>
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-content">
+    <!-- <img src="Image/Hero.png" alt="Hero Image" draggable="false"> -->
+     <div class="hero-img" id="heroImg"></div>
+    <div class="hero-text">
+    <h1>Start Your Day Right</h1>
+    <p>Fresh Coffee, Fresh Mood</p>
+    <button href="#" class="order" id="orderBtn">Order Now</button>
+    </div>
+  </div>
+  </div>
+
+ <!-- Categories -->
+    <div class="categories text-center my-5">
+        <div class="container-categories col-12 col-md-10 col-lg-8 mx-auto">
+    <h2>Explore Our Categories</h2>
+    <div class="category-cards d-flex align-items-center justify-content-center gap-4 mt-4">
+        <div class="category-card" onclick="selectCategory('hot' , null)">
+            <div class="category-img-box">
+        <img src="Image/Hot.png" alt="Hot Coffee" draggable="false">
+        </div>
+        <div class="category-info-box" >
+        <h3 id="hot">Hot Coffee</h3>
+        <p>Freshly brewed hot coffee for the perfect start.</p>
+        </div>
+        </div>
+        <div class="category-card" onclick="selectCategory('iced' , null)">
+    <div class="category-img-box">
+        <img src="Image/Iced.png" alt="Iced Coffee" draggable="false">
+        </div>
+        <div class="category-info-box">
+        <h3 id="iced">Iced Coffee</h3>
+        <p>Cool, refreshing coffee for any time of the day.</p>
+
+        </div>
+        </div>
+        <div class="category-card" onclick="selectCategory('desserts' , null)">
+    <div class="category-img-box">
+        <img src="Image/Dessert.png" alt="Desserts" draggable="false">
+        </div>
+        <div class="category-info-box">
+        <h3 id="dessert">Desserts</h3>
+        <p>Sweet treats to complete your perfect coffee experience.</p>
+        </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+<!-- Top Picks -->
+<div class="most-popular" id="most-popular-section" text-center my-5>
+    <div class="container-most-popular">
+    <h2 id="productsSectionTitle">Our Products <i class="fa fa-coffee"></i></h2>
+  
+    <div class="most-popular-cards" id="most-popular-cards">
+         <!-- <div class="most-popular-card"> 
+        <div class="card-img-box">
+        <img src="Image/Hot.png" alt="Latte" draggable="false" >
+        </div>
+        <div class="card-info-box">
+         <h3>Latte</h3>
+        <span>$4.99</span> 
+         <button>Add to Cart</button>
+        </div>
+        </div>
+
+                <div class="most-popular-card">
+        <div class="card-img-box">
+        <img src="Image/Espresso.jpg" alt="Espresso" draggable="false" >
+        </div>
+        <div class="card-info-box">
+         <h3>Espresso</h3>
+        <span>$3.99</span> 
+         <button>Add to Cart</button>
+        </div>
+
+        
+        </div>
+
+                <div class="most-popular-card">
+        <div class="card-img-box">
+        <img src="Image/Iced Caramel.jpg" alt="Iced Caramel" draggable="false" >
+        </div>
+        <div class="card-info-box">
+         <h3>Iced Caramel</h3>
+        <span>$5.99</span> 
+         <button>Add to Cart</button>
+      
+    
+        </div>
+
+        
+        </div>
+
+                <div class="most-popular-card">
+        <div class="card-img-box">
+        <img src="Image/Cold Brew.jpg" alt="Cold Brew" draggable="false" >
+        </div>
+        <div class="card-info-box">
+         <h3>Cold Brew</h3>
+        <span>$4.99</span> 
+         <button id="cartBtn">Add to Cart</button>
+      
+    
+        </div>
+
+        
+        </div>
+
+                <div class="most-popular-card">
+        <div class="card-img-box">
+        <img src="Image/Strawberry Cheesecake.jpg" alt="Strawberry Cheesecake" draggable="false" >
+        </div>
+        <div class="card-info-box">
+         <h3>Strawberry Cheesecake</h3>
+        <span>$6.99</span> 
+         <button>Add to Cart</button>
+      
+    
+        </div>
+
+        
+        </div>
+
+                <div class="most-popular-card">
+        <div class="card-img-box">
+        <img src="Image/Tiramisu.jpg" alt="Tiramisu" draggable="false" >
+        </div>
+        <div class="card-info-box">
+         <h3>Tiramisu</h3>
+        <span>$7.99</span> 
+         <button>Add to Cart</button>
+      
+    
+        </div>
+
+        
+        </div>  -->
+
+    </div>
+    <div class="pagination" id="pagination"></div>
+    </div>
+</div>
+
+<!-- Why us -->
+<div class="why-us text-center my-5">
+    <div class="container-why-us">
+        <h2>Why Choose Us?</h2>
+        <div class="why-cards">
+            <div class="why-card">
+                <i class="fa fa-heart"></i>
+                <h3>Quality Products</h3>
+                <p>We source only the finest ingredients for our products.</p>
+            </div>
+            <div class="why-card">
+                <i class="fa fa-truck"></i>
+                <h3>Fast Delivery</h3>
+                <p>Get your favorite coffee delivered to your doorstep quickly.</p>
+            </div>
+            <div class="why-card">
+                <i class="fa fa-users"></i>
+                <h3>Excellent Service</h3>
+                <p>Our friendly staff is always ready to assist you.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- About us -->
+<div class="about-us text-center" id="about-us">
+    <div class="container-about-us" >
+        <div class="about-content">
+        <span class="about-tag">About Us</span>
+        <h2>Crafted with Passion, Served with Love 
+          <i class="fas fa-coffee" style="color: #ac9060; font-size: 29px;"></i>
+        </h2>
+        <p>Brew Haven is more than coffee, it's a cozy space crafted for comfort, quality, and unforgettable moments.</p>
+        <div class="about-features">
+          <div>Premium Coffee</div>
+          <div>Cozy Atmosphere</div>
+          <div>Delicious Desserts</div>
+        </div>
+        </div>
+                <div class="about-img">
+        <img src="Image/About.jpg" alt="About Us" draggable="false">
+        </div>
+    </div>
+</div>
+
+<!-- Contact us -->
+<div class="contact-us  text-center" id="contact-us">
+    <div class="container-contact-us" >
+        <div class="contact-info">
+        <div class="text-info text-center">
+        <h2>Get In Touch</h2>
+        <p>If you have any questions or feedback, feel free to reach out to us!</p>
+        <p><i class="fa fa-envelope"></i> Email: coffee@brewhaven.com</a></p>
+        <p><i class="fa fa-phone"></i> Phone: (123) 456-7890</p>
+        <p><i class="fa fa-map-marker"></i> Address: 123 Coffee Street, Brew City, USA</p>
+        </div>
+        <div class="img-info">
+            <img src="Image/Contact.jpg" alt="Contact Us">
+        </div>
+        </div>
+                <div class="contact-form">
+            <h3>Send Us a Message</h3>
+            <form>
+                <input type="text" class="first" placeholder="First Name" required>
+                <input type="text" class="last" placeholder="Last Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+
+    </div>
+</div>
+    
+<!-- Footer -->
+<div class="footer">
+    <div class="container-footer">
+        <div class="footer-logo">
+        <a href="index.html"><img src="Image/logo-mini.svg" alt="Logo"></a>
+             <h2>Brew Haven</h2>
+        </div>
+   
+        <p>Luxury coffee crafted for your perfect moment.</p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+         <p class="copyright">&copy; 2026 Brew Haven. All rights reserved.</p>
+    </div>
+</div>
+
+
+
+
+<!-- jQuery library -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- main js -->
+<script src="JS/index.js"></script>
+
+</body>
+</html>
